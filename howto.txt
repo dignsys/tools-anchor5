@@ -1,0 +1,79 @@
+Flash iamges to target.
+-----------------------------------------------------------------------------------------------------
+
+1. Image information:
+=====================
+- bl-emmcboot.img                       - from dignsys github
+- bl_mon.img                            - from dignsys github
+- loader-emmc.img                       - from dignsys github
+- bootloader.img                        - from dignsys github 
+- params.bin 				- from dignsys github 
+- bl1-anchor5.bin 			- from dignsys github 
+- fip-loader-usb.img 			- from dignsys github 
+
+- partmap_artik530_tizen_emmc.txt       - Tizen specific
+
+2. USB download
+=====================
+2-1. Directories
+   1) tool directory :
+	Anchor5/Tizen-Work-boot/tools-anchor/scripts
+
+   2) binary directory :
+	Anchor5/Tizen-Work-boot/result
+
+   3) binary files :
+	- bl1-anchor5.bin
+	- fip-loader-usb.img
+
+	*** copy binay to result directory from boot-firmwares-anchor5/files
+
+2-2. Download binary by USB
+    1) change boot option to USB serial boot
+
+    2) check USB device on host 
+	$ lsusb |grep 4330
+	Bus 003 Device 067: ID 2375:4330 Digit@lway, Inc. 
+
+    3) download BL1 & u-Boot by script
+	./tools-anchor/scripts/uboot-usb-download.sh 
+
+
+3. Flash Tizen Image 
+=====================
+3.1 Target side fastboot start
+	< Target side >
+  	artik530#fastboot 0 
+
+3.2. Automatic Flash binary with partmap_anchor5_tizen_emmc.txt
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     1) Directories
+	- tool directory :
+		Anchor5/Tizen-Work-boot/tools-anchor/scripts
+		Anchor5/Tizen-Work-boot/tools-anchor/files
+
+	- result data & binary directory :
+		Anchor5/Tizen-Work-boot/result
+
+		*** copy all data & binay to result directory
+			: tizen boot packages
+			: tizen packages
+
+     2) flash boot ninary : 
+	 - BL : bl1-emmcboot.bin, loader-emmc.img, bl_mon.img
+	 - u-boot : bootloader.img, params.bin 
+	 - boot & modules : boot.img, modules.img
+
+	*** extract file from tizen-unified_iot-boot-armv7l-artik530.tar.gz
+
+	$ cd ~/Anchor5/Tizen-Work-boot
+	$ ./tools-anchor/scripts/fastboot-boot-download.sh
+
+     3) flash all ninary : boot binary + rootfs & data
+	 - rootfs & data : rootfs.img, system-data.img, user.img
+	*** extract file from tizen-unified_iot-headed-3parts-armv7l-artik530.tar.gz
+
+	$ cd ~/Anchor5/Tizen-Work-boot
+	$ ./tools-anchor/scripts/fastboot-download.sh
+
+

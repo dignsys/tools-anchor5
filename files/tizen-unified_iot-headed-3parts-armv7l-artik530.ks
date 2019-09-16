@@ -35,8 +35,10 @@ building-blocks-sub1-domain_Feature-Smartthings_App
 dbus-tools
 system-plugin-feature-namespace
 system-plugin-feature-session-bind
+
 # @ IoT Headed Base
 building-blocks-root-Preset_iot_headed
+
 # @ IoT Adaptation Artik530_710
 alsa-utils
 bluetooth-frwk-plugin-headed

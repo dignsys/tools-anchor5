@@ -300,7 +300,7 @@ else
 fi
 
 update_env ${RESULT_DIR}/params.bin
-#update_boot ${RESULT_DIR}/boot.img
-#update_modules ${RESULT_DIR}/modules.img
+update_boot ${RESULT_DIR}/boot.img
+update_modules ${RESULT_DIR}/modules.img
 
 sudo fastboot continue

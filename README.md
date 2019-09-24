@@ -24,11 +24,11 @@ How to use tools on Anchor
 
 3. Download tools-anchor & boot firmwares
 
-  $ https://github.com/dignsys/tools-anchor.git
+  $ git clone https://github.com/dignsys/tools-anchor.git
   
-  $ https://github.com/dignsys/anchor5-tizen-images.git
+  $ git clone https://github.com/dignsys/anchor5-tizen-images.git
   
-  $ https://github.com/dignsys/boot-firmwares-anchor5.git
+  $ git clone https://github.com/dignsys/boot-firmwares-anchor5.git
   
 
 4. install boot firmware binary

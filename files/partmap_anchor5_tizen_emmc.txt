@@ -7,4 +7,4 @@ flash=mmc,0:boot:ext4:0x400000,0x8000000:boot.img;
 flash=mmc,0:modules:ext4:0x10400000,0x8000000:modules.img;
 flash=mmc,0:rootfs:ext4:0x18400000,0x7E000000:rootfs.img;
 flash=mmc,0:system:ext4:0x98400000,0x20000000:system-data.img;
-flash=mmc,0:user:ext4:0xB8400000,0x80000000:user.img;
+flash=mmc,0:user:ext4:0xB8410000,0x80000000:user.img;

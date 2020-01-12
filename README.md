@@ -8,14 +8,10 @@ Anchor5 support Tizen OS. You can find detail information for Tizen OS on this w
 
 The directory structure to handle Anchor5 firmware is followed.
 >  **Tizen-Work-boot**
-
-    - tools-anchor
-    
-    - boot-firmwares-anchor5
-    
-    - anchor5-tizen-images
-    
-    - result
+>    - tools-anchor   
+>    - boot-firmwares-anchor5
+>    - anchor5-tizen-images
+>    - result
 
 # How to tools-anchor5
 ## 1. Create working directory

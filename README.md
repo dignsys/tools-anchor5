@@ -22,8 +22,11 @@ The directory structure to handle Anchor5 firmware is followed.
 ## 2. Download tools-anchor5 & boot firmware
 
 >$ git clone https://github.com/dignsys/tools-anchor5.git
+
 >$ git clone https://github.com/dignsys/boot-firmwares-anchor5.git
+
 >$ git clone https://github.com/dignsys/tizen-images-anchor5.git
+
 >$ wget http://download.tizen.org/releases/daily/tizen/5.5-unified/tizen-5.5-unified_20191203.1/images/standard/iot-headed-3parts-armv7l-artik530_710/tizen-5.5-unified_20191203.1_iot-headed-3parts-armv7l-artik530_710.tar.gz
 
 ## 3. Install boot firmware binary

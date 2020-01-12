@@ -17,8 +17,8 @@ The directory structure to handle Anchor5 firmware is followed.
 ## 1. Create working directory
 ```
 $ cd ~/
-$ mkdir Tizen-Work-boot
-$ cd Tizen-Work-boot
+$ mkdir -p ~/anchor/Tizen-Work-boot
+$ cd ~/anchor/Tizen-Work-boot
 ```
 
 ## 2. Download tools-anchor5 & boot firmware

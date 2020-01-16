@@ -22,8 +22,11 @@ user --name guest  --groups audio,video --password 'tizen'
 
 repo --name=local --baseurl=file:///home/hbahn/GBS-ANCHOR5-ROOT/tizen_anchor5/local/repos/tizen_anchor5/armv7l/ --priority=1
 
-#repo --name=unified-standard --baseurl=http://download.tizen.org/snapshots/tizen/unified/tizen-unified_20190523.1/repos/standard/packages/ --ssl_verify=no
-repo --name=unified-standard --baseurl=http://download.tizen.org/releases/milestone/tizen/unified/tizen-unified_20190523.1/repos/standard/packages/ --ssl_verify=no
+#repo --name=unified-standard --baseurl=http://download.tizen.org/releases/milestone/tizen/unified/tizen-unified_20190523.1/repos/standard/packages/ --ssl_verify=no
+#repo --name=unified-standard --baseurl=http://download.tizen.org/snapshots/tizen/unified/tizen-unified_20190923.1/repos/standard/packages/ --ssl_verify=no
+
+repo --name=unified-standard --baseurl=http://download.tizen.org/snapshots/tizen/unified/latest/repos/standard/packages/ --ssl_verify=no
+repo --name=base-standard --baseurl=http://download.tizen.org/snapshots/tizen/base/latest/repos/standard/packages/ --ssl_verify=no
 
 %packages
 
@@ -41,16 +44,16 @@ anchor5-boot-firmware
 
 
 %attachment
-/u-boot/bl1-emmcboot.bin
-/u-boot/loader-emmc.img
-/u-boot/bl_mon.img
+#/u-boot/bl1-emmcboot.bin
+#/u-boot/loader-emmc.img
+#/u-boot/bl_mon.img
 /u-boot/bootloader.img
 /u-boot/params.bin
 
 /boot/zImage
 /boot/s5p4418-artik530-raptor-rev00.dtb
 /boot/s5p4418-artik530-raptor-rev03.dtb
-/boot/logo.bmp
+#/boot/logo.bmp
 /boot/uInitrd
 %end
 

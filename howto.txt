@@ -76,4 +76,18 @@ Flash iamges to target.
 	$ cd ~/Anchor5/Tizen-Work-boot
 	$ ./tools-anchor/scripts/fastboot-download.sh
 
+4. Flash Tizen Image (by thor down)
+==========================================
+4-1. install lthor
+        $ sudo apt-get install lthor
 
+4.2 Target side thordown start
+        artik530# thordown
+        TIZEN "THOR" Downloader
+
+4.3. Flash binary by lthor
+     - only for Tizen image
+        $ sudo lthor tizen-unified_20191203.1_iot-headed-3parts-armv7l-artik530_710.tar.gz
+
+     - both of boot & Tizen image
+	$ sudo lthor tizen-unified_iot-boot-armv7l-artik530anchor5.tar.gz tizen-5.5-unified_20191203.1_iot-headed-3parts-armv7l-artik530_710.tar.gz

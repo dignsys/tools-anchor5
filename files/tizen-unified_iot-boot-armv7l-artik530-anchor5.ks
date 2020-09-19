@@ -7,9 +7,10 @@
 
 lang en_US.UTF-8
 keyboard us
-timezone --utc America/Los_Angeles
-part /boot --fstype="ext4" --size=24 --ondisk=mmcblk0 --active --label boot --fsoptions=defaults,noatime
-part /lib/modules --fstype="ext4" --size=25 --ondisk=mmcblk0 --active --label modules --fsoptions=defaults,noatime
+#timezone --utc America/Los_Angeles
+timezone --utc Korea/Seoul
+part /boot --fstype="ext4" --size=64 --ondisk=mmcblk0 --active --label boot --fsoptions=defaults,noatime
+part /lib/modules --fstype="ext4" --size=64 --ondisk=mmcblk0 --active --label modules --fsoptions=defaults,noatime
 
 
 rootpw tizen 
@@ -20,13 +21,10 @@ desktop --autologinuser=guest
 user --name guest  --groups audio,video --password 'tizen'
 
 
-repo --name=local --baseurl=file:///home/hbahn/GBS-ANCHOR5-ROOT/tizen_anchor5/local/repos/tizen_anchor5/armv7l/ --priority=1
+repo --name=local --baseurl=file:///home/hbahn/work2/GBS-ANCHOR5-ROOT/tizen_anchor5/local/repos/tizen_anchor5/armv7l/ --priority=1
 
-#repo --name=unified-standard --baseurl=http://download.tizen.org/releases/milestone/tizen/unified/tizen-unified_20190523.1/repos/standard/packages/ --ssl_verify=no
-#repo --name=unified-standard --baseurl=http://download.tizen.org/snapshots/tizen/unified/tizen-unified_20190923.1/repos/standard/packages/ --ssl_verify=no
-
-repo --name=unified-standard --baseurl=http://download.tizen.org/snapshots/tizen/unified/latest/repos/standard/packages/ --ssl_verify=no
-repo --name=base-standard --baseurl=http://download.tizen.org/snapshots/tizen/base/latest/repos/standard/packages/ --ssl_verify=no
+repo --name=unified-standard --baseurl=http://download.tizen.org/releases/milestone/tizen/unified/latest/repos/standard/packages/ --ssl_verify=no
+repo --name=base-standard --baseurl=http://download.tizen.org/releases/milestone/tizen/base/latest/repos/standard/packages/ --ssl_verify=no
 
 %packages
 
@@ -52,9 +50,9 @@ anchor5-boot-firmware
 
 /boot/zImage
 /boot/s5p4418-artik530-raptor-rev00.dtb
-/boot/s5p4418-artik530-raptor-rev03.dtb
+#/boot/s5p4418-artik530-raptor-rev03.dtb
 #/boot/logo.bmp
-/boot/uInitrd
+#/boot/uInitrd
 %end
 
 %post

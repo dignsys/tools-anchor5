@@ -7,9 +7,9 @@
 
 lang en_US.UTF-8
 keyboard us
-timezone --utc America/Los_Angeles
-part /boot --fstype="ext4" --size=24 --ondisk=mmcblk0 --active --label boot --fsoptions=defaults,noatime
-part /lib/modules --fstype="ext4" --size=25 --ondisk=mmcblk0 --active --label modules --fsoptions=defaults,noatime
+timezone --utc Korea/Seoul
+part /boot --fstype="ext4" --size=64 --ondisk=mmcblk0 --active --label boot --fsoptions=defaults,noatime
+part /lib/modules --fstype="ext4" --size=64 --ondisk=mmcblk0 --active --label modules --fsoptions=defaults,noatime
 
 
 rootpw tizen 
@@ -49,9 +49,9 @@ anchor5-boot-firmware
 
 /boot/zImage
 /boot/s5p4418-artik530-raptor-rev00.dtb
-/boot/s5p4418-artik530-raptor-rev03.dtb
+#/boot/s5p4418-artik530-raptor-rev03.dtb
 #/boot/logo.bmp
-/boot/uInitrd
+#/boot/uInitrd
 %end
 
 %post
